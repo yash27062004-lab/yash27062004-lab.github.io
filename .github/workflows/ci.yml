@@ -1,0 +1,62 @@
+
+name: Site CI
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+
+permissions:
+  contents: read
+
+concurrency:
+  group: site-ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    name: Validate site
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v7
+
+      - name: Set up Go
+        uses: actions/setup-go@v7
+        with:
+          go-version-file: go.mod
+          cache: true
+
+      - name: Check formatting
+        run: |
+          files="$(gofmt -l .)"
+          if [ -n "$files" ]; then
+            printf 'These files need gofmt:\n%s\n' "$files"
+            exit 1
+          fi
+
+      - name: Run static analysis
+        run: go vet ./...
+
+      - name: Run tests with race detection
+        run: go test -race ./...
+
+      - name: Compile packages
+        run: go build ./...
+
+      - name: Generate website
+        run: go run ./cmd/sitegen
+
+      - name: Verify generated files
+        run: |
+          test -s dist/index.html
+          test -s dist/blog/index.html
+          test -s dist/feed.xml
+          test -s dist/sitemap.xml
+          test -s dist/robots.txt
+          test -s dist/css/style.css
