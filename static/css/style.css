@@ -1,10 +1,11 @@
+
 :root {
-    --background: #F1F5F8;
-    --text: #202B3C;
-    --muted: #4D5A6D;
-    --border: #D5DFE9;
-    --accent: #315D99;
-    --accent-hover: #244775;
+    --background: #E8D0AA;
+    --text: #282723;
+    --muted: #62564A;
+    --border: #CEB58D;
+    --accent: #194A3A;
+    --accent-hover: #12382D;
     --highlight: #8A632F;
     --content-width: 1000px;
 }
@@ -23,22 +24,13 @@ body {
     min-height: 100vh;
     min-height: 100svh;
     margin: 0;
-
     display: flex;
     flex-direction: column;
-
     background: var(--background);
     color: var(--text);
-
-    font-family:
-            -apple-system,
-            BlinkMacSystemFont,
-            "Segoe UI",
-            sans-serif;
-
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     font-size: 16px;
     line-height: 1.75;
-
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
 }
@@ -60,20 +52,15 @@ a:focus-visible {
     color: #FFFFFF;
 }
 
-/* Accessibility */
-
 .skip-link {
     position: absolute;
     top: 8px;
     left: 8px;
     z-index: 10;
-
     padding: 10px 14px;
     transform: translateY(-160%);
-
     border: 1px solid var(--border);
     border-radius: 4px;
-
     background: #FFFFFF;
     color: var(--text);
     font-size: 0.9rem;
@@ -83,24 +70,19 @@ a:focus-visible {
     transform: translateY(0);
 }
 
-/* Header */
-
 .site-header {
     width: min(var(--content-width), calc(100% - 64px));
     min-height: 78px;
     margin-inline: auto;
-
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 28px;
-
     border-bottom: 1px solid var(--border);
 }
 
 .brand {
     flex-shrink: 0;
-
     color: var(--text);
     font-size: 0.98rem;
     font-weight: 650;
@@ -120,7 +102,6 @@ a:focus-visible {
     color: var(--accent);
     font-size: 0.87rem;
     text-decoration: none;
-
     transition: color 150ms ease;
 }
 
@@ -129,8 +110,6 @@ a:focus-visible {
     text-decoration: underline;
 }
 
-/* Main layout */
-
 #main {
     flex: 1;
     display: flex;
@@ -138,15 +117,11 @@ a:focus-visible {
     min-width: 0;
 }
 
-/* Homepage */
-
 .home {
     width: 100%;
     flex: 1;
-
     display: grid;
     place-items: center;
-
     padding: 36px 24px;
 }
 
@@ -159,13 +134,11 @@ a:focus-visible {
 
 .intro h1 {
     margin: 0;
-
     color: var(--text);
     font-size: clamp(3rem, 8vw, 5.2rem);
     font-weight: 550;
     letter-spacing: -0.07em;
     line-height: 1.12;
-
     overflow-wrap: anywhere;
 }
 
@@ -175,7 +148,6 @@ a:focus-visible {
 
 .role {
     margin: 17px 0 0;
-
     color: var(--text);
     font-size: 1.08rem;
     font-weight: 550;
@@ -184,13 +156,10 @@ a:focus-visible {
 .description {
     max-width: 420px;
     margin: 12px auto 0;
-
     color: var(--muted);
     font-size: 1rem;
     line-height: 1.85;
 }
-
-/* Homepage social links */
 
 .hero-links {
     display: flex;
@@ -198,7 +167,6 @@ a:focus-visible {
     justify-content: center;
     flex-wrap: wrap;
     gap: 12px 25px;
-
     margin-top: 30px;
 }
 
@@ -207,7 +175,6 @@ a:focus-visible {
     font-size: 0.88rem;
     font-weight: 500;
     text-decoration: none;
-
     transition: color 150ms ease;
 }
 
@@ -216,12 +183,9 @@ a:focus-visible {
     text-decoration: underline;
 }
 
-/* Footer */
-
 .site-footer {
     width: min(var(--content-width), calc(100% - 64px));
     margin-inline: auto;
-
     border-top: 1px solid var(--border);
 }
 
@@ -256,7 +220,6 @@ a:focus-visible {
     color: var(--accent);
     font-size: 0.82rem;
     text-decoration: none;
-
     transition: color 150ms ease;
 }
 
@@ -281,7 +244,6 @@ a:focus-visible {
     align-items: center;
     flex-wrap: wrap;
     gap: 7px;
-
     color: var(--muted);
     font-size: 0.76rem;
 }
@@ -296,16 +258,12 @@ a:focus-visible {
     text-decoration: underline;
 }
 
-/* Individual pages */
-
 .page-main {
     width: 100%;
     flex: 1;
     min-width: 0;
-
     display: grid;
     place-items: center;
-
     padding: 48px 20px;
 }
 
@@ -317,20 +275,17 @@ a:focus-visible {
 
 .page-shell h1 {
     margin: 0;
-
     color: var(--text);
     font-size: clamp(2.5rem, 7vw, 4rem);
     font-weight: 550;
     letter-spacing: -0.06em;
     line-height: 1.18;
-
     overflow-wrap: anywhere;
 }
 
 .page-copy {
     max-width: 560px;
     margin-top: 22px;
-
     color: var(--muted);
     line-height: 1.9;
     overflow-wrap: anywhere;
@@ -360,7 +315,6 @@ a:focus-visible {
 .email-link {
     display: inline-block;
     margin-top: 20px;
-
     color: var(--accent);
     font-size: 0.9rem;
     font-weight: 600;
@@ -385,8 +339,6 @@ a:focus-visible {
     text-decoration: underline;
 }
 
-/* Blog listing */
-
 .blog-shell {
     max-width: 700px;
 }
@@ -403,14 +355,12 @@ a:focus-visible {
 
 .post-date {
     margin: 0 0 8px;
-
     color: var(--muted);
     font-size: 0.8rem;
 }
 
 .post-entry h2 {
     margin: 0 0 8px;
-
     font-size: 1.35rem;
     font-weight: 600;
     letter-spacing: -0.025em;
@@ -430,7 +380,6 @@ a:focus-visible {
 .post-summary,
 .empty-posts {
     margin: 0 0 12px;
-
     color: var(--muted);
     font-size: 0.94rem;
     overflow-wrap: anywhere;
@@ -446,8 +395,6 @@ a:focus-visible {
     color: var(--accent-hover);
 }
 
-/* Blog articles */
-
 .article-shell {
     max-width: 680px;
 }
@@ -458,7 +405,6 @@ a:focus-visible {
 
 .article-summary {
     margin-block: 18px 30px;
-
     color: var(--muted);
     font-size: 1.03rem;
     line-height: 1.85;
@@ -469,7 +415,6 @@ a:focus-visible {
     max-width: 100%;
     color: var(--text);
     line-height: 1.85;
-
     overflow-wrap: anywhere;
 }
 
@@ -498,12 +443,10 @@ a:focus-visible {
 .post-content pre {
     max-width: 100%;
     padding: 16px;
-
     overflow-x: auto;
     border: 1px solid var(--border);
     border-radius: 5px;
-
-    background: rgba(32, 43, 60, 0.045);
+    background: rgba(40, 39, 35, 0.045);
     font-size: 0.87rem;
     line-height: 1.65;
 }
@@ -531,14 +474,11 @@ a:focus-visible {
     text-underline-offset: 4px;
 }
 
-/* Responsive layout */
-
 @media (max-width: 700px) {
     .site-header {
         width: calc(100% - 36px);
         min-height: auto;
         padding-block: 19px;
-
         flex-direction: column;
         gap: 13px;
     }
@@ -579,70 +519,6 @@ a:focus-visible {
     }
 }
 
-@media (max-width: 420px) {
-    body {
-        font-size: 15px;
-    }
-
-    .main-nav {
-        gap: 9px 13px;
-    }
-
-    .main-nav a {
-        font-size: 0.8rem;
-    }
-
-    .home {
-        padding-inline: 16px;
-    }
-
-    .intro h1 {
-        font-size: clamp(2.5rem, 11vw, 3.2rem);
-    }
-
-    .description {
-        font-size: 0.94rem;
-    }
-
-    .hero-links {
-        gap: 14px 19px;
-    }
-
-    .license-links {
-        align-items: flex-start;
-    }
-
-    .post-content pre {
-        padding: 12px;
-    }
-}
-
-/* Short desktop screens */
-
-@media (max-height: 620px) and (min-width: 701px) {
-    .site-header {
-        min-height: 64px;
-    }
-
-    .home {
-        padding-block: 24px;
-    }
-
-    .hero-links {
-        margin-top: 20px;
-    }
-
-    .footer-top {
-        padding-block: 11px 8px;
-    }
-
-    .footer-bottom {
-        padding-block: 9px 12px;
-    }
-}
-
-/* Reduced motion */
-
 @media (prefers-reduced-motion: reduce) {
     html {
         scroll-behavior: auto;
@@ -651,7 +527,8 @@ a:focus-visible {
     *,
     *::before,
     *::after {
-        transition: none !important;
-        animation: none !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
     }
 }
