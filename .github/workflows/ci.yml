@@ -4,10 +4,10 @@ name: Site CI
 on:
   push:
     branches:
-      - master
+      - main
   pull_request:
     branches:
-      - master
+      - main
 
 permissions:
   contents: read
@@ -36,7 +36,7 @@ jobs:
         run: |
           files="$(gofmt -l .)"
           if [ -n "$files" ]; then
-            printf 'These files need gofmt:\n%s\n' "$files"
+            printf '%s\n' "$files"
             exit 1
           fi
 

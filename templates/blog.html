@@ -1,0 +1,39 @@
+{{define "content"}}
+<section class="page-main" aria-labelledby="blog-title">
+    <div class="page-shell blog-shell">
+        <h1 id="blog-title">Writing</h1>
+
+        <p class="page-copy">
+            Articles, observations, and ideas worth sharing.
+        </p>
+
+        <div class="post-list">
+            {{if .Posts}}
+            {{range .Posts}}
+            <article class="post-entry">
+                <p class="post-date">
+                    <time datetime="{{.Date}}">{{.Date}}</time>
+                </p>
+
+                <h2>
+                    <a href="/blog/{{.Slug}}/">{{.Title}}</a>
+                </h2>
+
+                <p class="post-summary">{{.Summary}}</p>
+
+                <a class="inline-link" href="/blog/{{.Slug}}/">
+                    Read article <span aria-hidden="true">↗</span>
+                </a>
+            </article>
+            {{end}}
+            {{else}}
+            <p class="empty-posts">No articles published yet.</p>
+            {{end}}
+        </div>
+
+        <p class="back-home">
+            <a href="/">← Back to home</a>
+        </p>
+    </div>
+</section>
+{{end}}

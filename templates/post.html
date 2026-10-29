@@ -1,0 +1,21 @@
+{{define "content"}}
+<section class="page-main" aria-labelledby="article-title">
+    <article class="page-shell article-shell">
+        <p class="post-date">
+            <time datetime="{{.Post.Date}}">{{.Post.Date}}</time>
+        </p>
+
+        <h1 id="article-title">{{.Post.Title}}</h1>
+
+        <p class="article-summary">{{.Post.Summary}}</p>
+
+        <div class="post-content">
+            {{.Post.Content}}
+        </div>
+
+        <p class="back-home">
+            <a href="/blog/">← Back to blog</a>
+        </p>
+    </article>
+</section>
+{{end}}

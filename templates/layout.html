@@ -1,0 +1,90 @@
+{{define "layout"}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="{{.Description}}">
+    <meta name="theme-color" content="#F1F5F8">
+
+    <title>{{.MetaTitle}}</title>
+
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link
+            rel="alternate"
+            type="application/rss+xml"
+            title="Yash Sharma — RSS Feed"
+            href="/feed.xml"
+    >
+</head>
+<body id="top">
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+    <a class="brand" href="/" aria-label="Yash Sharma home">
+        Yash Sharma
+    </a>
+
+    <nav class="main-nav" aria-label="Main navigation">
+        <a href="/about/">About</a>
+        <a href="/expertise/">Expertise</a>
+        <a href="/experience/">Experience</a>
+        <a href="/blog/">Blog</a>
+        <a href="/contact/">Contact</a>
+    </nav>
+</header>
+
+<main id="main" tabindex="-1">
+    {{template "content" .}}
+</main>
+
+<footer class="site-footer">
+    <div class="footer-top">
+        <a class="footer-brand" href="/">Yash Sharma.</a>
+
+        <nav class="social-links" aria-label="Social links">
+            <a href="mailto:yash27062004@gmail.com">Email</a>
+
+            <a
+                    href="https://github.com/yash27062004-lab"
+                    target="_blank"
+                    rel="noopener noreferrer"
+            >GitHub</a>
+
+            <a
+                    href="https://x.com/yash27062004"
+                    target="_blank"
+                    rel="noopener noreferrer"
+            >X</a>
+
+            <a
+                    href="https://www.linkedin.com/in/yash-sharma-426092385/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+            >LinkedIn</a>
+
+            <a href="/feed.xml">RSS</a>
+        </nav>
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2026 Yash Sharma</p>
+
+        <nav class="license-links" aria-label="Licenses">
+            <a
+                    href="https://github.com/yash27062004-lab/yash27062004-lab.github.io/blob/main/LICENSE"
+            >Source code: MIT</a>
+
+            <span aria-hidden="true">·</span>
+
+            <a
+                    href="https://github.com/yash27062004-lab/yash27062004-lab.github.io/blob/main/CONTENT-LICENSE.md"
+            >Content: All rights reserved</a>
+        </nav>
+    </div>
+</footer>
+
+</body>
+</html>
+{{end}}

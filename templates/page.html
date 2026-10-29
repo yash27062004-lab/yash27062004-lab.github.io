@@ -1,0 +1,21 @@
+{{define "content"}}
+<section class="page-main" aria-labelledby="page-title">
+    <article class="page-shell">
+        <h1 id="page-title">{{.Title}}</h1>
+
+        <div class="page-copy">
+            {{.Content}}
+        </div>
+
+        {{if .Email}}
+        <a class="email-link" href="mailto:{{.Email}}">
+            {{.Email}} ↗
+        </a>
+        {{end}}
+
+        <p class="back-home">
+            <a href="/">← Back to home</a>
+        </p>
+    </article>
+</section>
+{{end}}
