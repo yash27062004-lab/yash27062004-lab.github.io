@@ -109,12 +109,17 @@ func CopyDir(sourceDir, destinationDir string) error {
 	)
 }
 
-func copyFile(sourcePath, destinationPath string) error {
+func copyFile(sourcePath, destinationPath string) (resultErr error) {
 	source, err := os.Open(sourcePath)
 	if err != nil {
 		return fmt.Errorf("open source file: %w", err)
 	}
-	defer source.Close()
+
+	defer func() {
+		if closeErr := source.Close(); closeErr != nil && resultErr == nil {
+			resultErr = fmt.Errorf("close source file: %w", closeErr)
+		}
+	}()
 
 	if err := os.MkdirAll(filepath.Dir(destinationPath), 0755); err != nil {
 		return fmt.Errorf("create destination directory: %w", err)

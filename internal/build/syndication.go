@@ -101,15 +101,19 @@ func writeSitemap(path, siteURL string, paths []string) error {
 }
 
 func writeRobots(path, siteURL string) error {
-	content := "User-agent: *\n" +
+	robotsContent := "User-agent: *\n" +
 		"Allow: /\n" +
 		"Sitemap: " + siteURL + "/sitemap.xml\n"
 
 	if err := os.MkdirAll(filepath.Dir(path), 0755); err != nil {
-		return err
+		return fmt.Errorf("create robots directory: %w", err)
 	}
 
-	return os.WriteFile(path, []byte(content), 0644)
+	if err := os.WriteFile(path, []byte(robotsContent), 0644); err != nil {
+		return fmt.Errorf("write robots.txt: %w", err)
+	}
+
+	return nil
 }
 
 func writeXML(path string, value any) error {

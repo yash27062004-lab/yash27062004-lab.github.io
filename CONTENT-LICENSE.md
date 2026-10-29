@@ -1,56 +1,23 @@
-\# Content License
+# Content License
 
+This document covers original editorial and creative content displayed on this website, including original articles, page copy, biography text, descriptions, and other original writing created by Yash Sharma, unless a specific item states a different license.
 
+The original software code that generates and styles the website is licensed separately under the MIT License in `LICENSE`. This content license does not replace that software license, and the MIT License does not grant permission to republish the original editorial content described here.
 
-\## Original Articles
+## Original writing
 
+Original website content is copyright © 2026 Yash Sharma. All rights reserved.
 
+You may read this content and share links to it. You may not reproduce, republish, modify, distribute, or commercially reuse the original content without prior written permission, except where use is permitted by applicable law or a different license is explicitly stated.
 
-All original articles and written content on this website are
+## Personal information and original images
 
-copyright © 2026 Yash Sharma. All rights reserved.
+Personal biography, personal information, and original images or graphics created by Yash Sharma may not be reused without permission unless a specific license or applicable law allows it.
 
+## Third-party material
 
+Material created by other authors or organizations is not covered by this content license. It remains subject to its owner's copyright and license terms. Third-party notices for software dependencies are listed in `THIRD_PARTY_NOTICES.md`.
 
-You may read and share links to these articles. Republishing,
+## Permission requests
 
-modifying, or commercially reusing the content requires
-
-permission from the copyright owner, unless a different license
-
-is explicitly stated.
-
-
-
-\## Personal Information and Images
-
-
-
-Personal information, biography, and original images on this
-
-website may not be reused without permission unless stated
-
-otherwise.
-
-
-
-\## Third-Party Material
-
-
-
-Some content may belong to other authors or organizations.
-
-Such material remains subject to its respective copyright
-
-and license terms.
-
-
-
-\## Permission Requests
-
-
-
-For permission to reuse my original content, contact me using
-
-the contact details published on this website.
-
+For permission to reuse original website content, contact me using the contact details published on the website.
